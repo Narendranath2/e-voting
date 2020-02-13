@@ -20,7 +20,7 @@ class Login extends React.Component {
     render() {
         return (
             <div style={{ backgroundSize: "100%" }}>
-                <img src={img} style={{ width: "100%" }}></img>
+                <img src={img} style={{ width: "100%"}}></img>
                 <div>
                     <Form style={{ marginTop: "-50%", position: "absolute" }}>
                         <Form.Group controlId="formGroupEmail">
