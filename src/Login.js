@@ -19,7 +19,7 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div style={{ backgroundSize: "100%" }}>
+            <body>
                 <img src={img} style={{ width: "100%"}}></img>
                 <div>
                     <Form style={{ marginTop: "-50%", position: "absolute" }}>
@@ -36,7 +36,7 @@ class Login extends React.Component {
                 </Button>
                     </Form>
                 </div>
-            </div>
+            </body>
         );
     }
 
