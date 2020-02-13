@@ -1,6 +1,5 @@
 import React from 'react'
 import './App.css'
-import img from './bck.png'
 import { Form, Button, Col } from 'react-bootstrap'
 
 function Signup() {
