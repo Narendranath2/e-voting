@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Navi() {
     return (
         <Navbar style={{ backgroundColor: "#000000" }} variant="dark" expand="lg">
-            <Link to='/'>
+            <Link to={`${process.env.PUBLIC_URL}/`}>
                 <Navbar.Brand style={{ fontSize: 50, fontWeight: "bold", letterSpacing: 3 }}>Z-Voting</Navbar.Brand>
             </Link>
             <Nav className="ml-auto">

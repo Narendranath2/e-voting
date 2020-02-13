@@ -64,7 +64,7 @@ function Home() {
                 <Nav className="ml-auto">
                     <Nav.Item style={{ color: "white", marginTop: 10, marginRight: 10 }}>email: narendranathgoparaju@gmail.com</Nav.Item>
                     <Nav.Item className="Login-btn">
-                        <Button variant="warning" style={{ margin: 2 }} onClick={() => window.open("https://github.com/Narendranath2/e-voting-blockchain", "_blank")}>Support</Button>
+                        <Button variant="warning" style={{ margin: 2 }} onClick={() => window.open("https://github.com/Narendranath2/e-voting", "_blank")}>Support</Button>
                     </Nav.Item>
 
                 </Nav>
