@@ -5,7 +5,7 @@ import { Form, Button, Col } from 'react-bootstrap'
 function Signup() {
     return (
         <div>
-            <Form style={{}}>
+            <Form>
                 <Form.Row style={{padding:20}}>
                     <Col>
                         <Form.Label style={{fontWeight:"bold"}}>First Name</Form.Label>

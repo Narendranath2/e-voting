@@ -19,10 +19,10 @@ class Login extends React.Component {
 
     render() {
         return (
-            <body>
-                <img src={img} style={{ width: "100%"}}></img>
+            <div>
+                <img src={img} style={{ width: "100%" }}></img>
                 <div>
-                    <Form style={{ marginTop: "-50%", position: "absolute" }}>
+                    <Form style={{ marginTop: "-30%", position: "absolute" }}>
                         <Form.Group controlId="formGroupEmail">
                             <Form.Label style={{ width: 300, marginLeft: "40%", fontSize: 20, fontWeight: "bold", letterSpacing: 0.3 }}>Email</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" style={{ width: 350, marginLeft: "40%" }} />
@@ -33,10 +33,10 @@ class Login extends React.Component {
                         </Form.Group>
                         <Button variant="dark" type="submit" style={{ width: 350, marginLeft: "40%", fontWeight: "bold", fontSize: 20, backgroundColor: "black", color: "#FFC74D", marginTop: 20 }}>
                             Login
-                </Button>
+                        </Button>
                     </Form>
                 </div>
-            </body>
+            </div>
         );
     }
 
