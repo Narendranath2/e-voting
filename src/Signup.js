@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { Form, Button, Col } from 'react-bootstrap'
-
+import Vote from './Vote'
 function Signup() {
     return (
         <div>
