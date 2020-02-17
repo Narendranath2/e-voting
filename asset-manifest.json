@@ -1,27 +1,35 @@
 {
   "files": {
     "main.css": "/e-voting/static/css/main.ec0ecd6f.chunk.css",
-    "main.js": "/e-voting/static/js/main.acc79ed3.chunk.js",
-    "main.js.map": "/e-voting/static/js/main.acc79ed3.chunk.js.map",
+    "main.js": "/e-voting/static/js/main.54e5fc9b.chunk.js",
+    "main.js.map": "/e-voting/static/js/main.54e5fc9b.chunk.js.map",
     "runtime-main.js": "/e-voting/static/js/runtime-main.346c1c5f.js",
     "runtime-main.js.map": "/e-voting/static/js/runtime-main.346c1c5f.js.map",
     "static/css/2.47e06e2e.chunk.css": "/e-voting/static/css/2.47e06e2e.chunk.css",
-    "static/js/2.9904c3b2.chunk.js": "/e-voting/static/js/2.9904c3b2.chunk.js",
-    "static/js/2.9904c3b2.chunk.js.map": "/e-voting/static/js/2.9904c3b2.chunk.js.map",
+    "static/js/2.6997c007.chunk.js": "/e-voting/static/js/2.6997c007.chunk.js",
+    "static/js/2.6997c007.chunk.js.map": "/e-voting/static/js/2.6997c007.chunk.js.map",
     "index.html": "/e-voting/index.html",
-    "precache-manifest.a2b65f1dd2dd916b5b232b51365db891.js": "/e-voting/precache-manifest.a2b65f1dd2dd916b5b232b51365db891.js",
+    "precache-manifest.72a30a6f0679873da9fad3b0b33931c5.js": "/e-voting/precache-manifest.72a30a6f0679873da9fad3b0b33931c5.js",
     "service-worker.js": "/e-voting/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/e-voting/static/css/2.47e06e2e.chunk.css.map",
     "static/css/main.ec0ecd6f.chunk.css.map": "/e-voting/static/css/main.ec0ecd6f.chunk.css.map",
-    "static/js/2.9904c3b2.chunk.js.LICENSE.txt": "/e-voting/static/js/2.9904c3b2.chunk.js.LICENSE.txt",
+    "static/js/2.6997c007.chunk.js.LICENSE.txt": "/e-voting/static/js/2.6997c007.chunk.js.LICENSE.txt",
+    "static/media/amadmi.png": "/e-voting/static/media/amadmi.6ff5d95f.png",
+    "static/media/bjp.jpg": "/e-voting/static/media/bjp.780e7647.jpg",
     "static/media/block.png": "/e-voting/static/media/block.714bb60c.png",
-    "static/media/login-back.svg": "/e-voting/static/media/login-back.7c4bba03.svg"
+    "static/media/janasena.png": "/e-voting/static/media/janasena.eaad2010.png",
+    "static/media/login-back.svg": "/e-voting/static/media/login-back.7c4bba03.svg",
+    "static/media/loksatta.jpg": "/e-voting/static/media/loksatta.dcabd5b7.jpg",
+    "static/media/prajasanthi.png": "/e-voting/static/media/prajasanthi.7408e128.png",
+    "static/media/tdp.jpg": "/e-voting/static/media/tdp.e90cd5f0.jpg",
+    "static/media/trs.png": "/e-voting/static/media/trs.1cecdadc.png",
+    "static/media/ysrcp.png": "/e-voting/static/media/ysrcp.2b60b97c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.346c1c5f.js",
     "static/css/2.47e06e2e.chunk.css",
-    "static/js/2.9904c3b2.chunk.js",
+    "static/js/2.6997c007.chunk.js",
     "static/css/main.ec0ecd6f.chunk.css",
-    "static/js/main.acc79ed3.chunk.js"
+    "static/js/main.54e5fc9b.chunk.js"
   ]
 }
