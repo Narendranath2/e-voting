@@ -6,18 +6,19 @@ import Signup from './Signup';
 import Home from './Home';
 import Navi from './Navi';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Container, Row } from 'react-bootstrap';
+import { RemoveScrollBar } from 'react-remove-scroll-bar';
+
 function App() {
   return (
-    <Router>
-      <div>
+      <Router>
         <Navi></Navi>
         <Switch>
           <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home}></Route>
           <Route path='/login' component={Login}></Route>
           <Route path='/signup' component={Signup}></Route>
         </Switch>
-      </div>
-    </Router>
+      </Router>
   );
 }
 
