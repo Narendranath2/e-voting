@@ -6,16 +6,13 @@ import Signup from './Signup';
 import Vote from './Vote';
 import Home from './Home';
 import Navi from './Navi';
-import { HashRouter, Switch, Route, withRouter } from 'react-router-dom';
-import { Container, Row } from 'react-bootstrap';
-import { RemoveScrollBar } from 'react-remove-scroll-bar';
-
+import { HashRouter, Switch, Route } from 'react-router-dom';
 function App() {
   return (
       <HashRouter>
         <Navi></Navi>
         <Switch>
-          <Route path='/' exact component={Home}></Route>
+          <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home}></Route>
           <Route path='/login' component={Login}></Route>
           <Route path='/signup' component={Signup}></Route>
           <Route path='/vote' component={Vote}></Route>
