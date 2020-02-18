@@ -6,13 +6,13 @@ import Signup from './Signup';
 import Vote from './Vote';
 import Home from './Home';
 import Navi from './Navi';
-import { BrowserRouter as Router, Switch, Route, withRouter } from 'react-router-dom';
+import { HashRouter, Switch, Route, withRouter } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
 import { RemoveScrollBar } from 'react-remove-scroll-bar';
 
 function App() {
   return (
-      <Router>
+      <HashRouter>
         <Navi></Navi>
         <Switch>
           <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home}></Route>
@@ -20,7 +20,7 @@ function App() {
           <Route path='/signup' component={Signup}></Route>
           <Route path='/vote' component={Vote}></Route>
         </Switch>
-      </Router>
+      </HashRouter>
   );
 }
 
