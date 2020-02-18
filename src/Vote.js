@@ -1,13 +1,14 @@
-import React from 'react'
-import './App.css'
-import party1 from './tdp.jpg'
-import party2 from './ysrcp.png'
-import party3 from './bjp.jpg'
-import party4 from './amadmi.png'
-import party5 from './trs.png'
-import party6 from './janasena.png'
-import party7 from './loksatta.jpg'
-import party8 from './prajasanthi.png'
+import React from 'react';
+import Axios from 'axios';
+import './App.css';
+import party1 from './tdp.jpg';
+import party2 from './ysrcp.png';
+import party3 from './bjp.jpg';
+import party4 from './amadmi.png';
+import party5 from './trs.png';
+import party6 from './janasena.png';
+import party7 from './loksatta.jpg';
+import party8 from './prajasanthi.png';
 import { Form, Button, Navbar, Nav, Container, Row, Col, Card } from 'react-bootstrap';
 class Vote extends React.Component {
 
@@ -20,14 +21,28 @@ class Vote extends React.Component {
     }
 
     postVote() {
-        // have to do an api call
-        return true;
+        //candidate id to be posted
+        var candId;
+        for (var i = 0; i < this.state.disabled.length; i++) {
+            if (this.state.disabled[i] == false) {
+                candId = i + 1;
+                break;
+            }
+        }
+        //Axios api call
+        Axios.get('https://nameless-castle-69274.herokuapp.com/addVote')
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 
     render() {
         return (
             <div align="center">
-                <Row style={{marginTop:20}}>
+                <Row style={{ marginTop: 20 }}>
                     <Col xs={12} sm={6} lg={3}>
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={party1} />
@@ -137,7 +152,7 @@ class Vote extends React.Component {
                         </Card>
                     </Col>
                 </Row>
-                <Row style={{marginTop:20}}>
+                <Row style={{ marginTop: 20 }}>
                     <Col xs={12} sm={6} lg={3}>
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={party5} />
@@ -248,7 +263,9 @@ class Vote extends React.Component {
                     </Col>
                 </Row>
                 <div align="center">
-                    <Button variant="success" type="submit" style={{ fontSize: 20, marginTop: 30, marginBottom: 20 }}>Finalize Vote</Button>
+                    <Button variant="success" onClick={() => {
+                        this.postVote();
+                    }} style={{ fontSize: 20, marginTop: 30, marginBottom: 20 }}>Finalize Vote</Button>
                 </div>
             </div>
         );
