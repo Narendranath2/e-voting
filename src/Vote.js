@@ -30,7 +30,11 @@ class Vote extends React.Component {
             }
         }
         //Axios api call
-        Axios.get('https://nameless-castle-69274.herokuapp.com/addVote')
+        Axios.post('https://nameless-castle-69274.herokuapp.com/addVote',{
+            voterName:"React",
+            voterId:"296",
+            candidateId:candId
+        })
             .then(function (response) {
                 console.log(response);
             })
