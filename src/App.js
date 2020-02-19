@@ -6,10 +6,10 @@ import Signup from './Signup';
 import Vote from './Vote';
 import Home from './Home';
 import Navi from './Navi';
-import { HashRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
   return (
-      <HashRouter>
+      <Router>
         <Navi></Navi>
         <Switch>
           <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home}></Route>
@@ -17,7 +17,7 @@ function App() {
           <Route path='/signup' component={Signup}></Route>
           <Route path='/vote' component={Vote}></Route>
         </Switch>
-      </HashRouter>
+      </Router>
   );
 }
 

@@ -3,7 +3,7 @@ import './App.css'
 import img1 from './block.png'
 import img2 from './bootstrap.png'
 import img3 from './springboot.png'
-import { Button, Navbar, Nav, Carousel, Row, Col, Card, Container } from 'react-bootstrap';
+import { Button, Navbar, Nav, Carousel, Row, Col, Card } from 'react-bootstrap';
 function Home() {
     return (
         <div style={{ overflowX: "hidden", overflowY: "auto" }}>

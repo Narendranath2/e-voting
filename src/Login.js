@@ -21,7 +21,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-                <img src={img} style={{ position: "fixed", marginLeft: "30%", width: "70vw" }}></img>
+                <img src={img} style={{ position: "fixed", marginLeft: "30%", width: "70vw" }} alt="Group of people"></img>
                 <div>
                     <Form>
                         <Form.Group controlId="formGroupEmail">
