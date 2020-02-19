@@ -17,7 +17,9 @@ class Vote extends React.Component {
             variants: ["dark", "dark", "dark", "dark", "dark", "dark", "dark", "dark"],
             disabled: [false, false, false, false, false, false, false, false],
             loading: false,
-            response: {}
+            response: {},
+            modalShow: false,
+            setModalShow: false
         }
     }
     async postVote() {
@@ -38,6 +40,7 @@ class Vote extends React.Component {
             candidateId: candId
         });
         let response = JSON.parse(JSON.stringify(res));
+        this.setState({setModalShow:true});
         console.log(response["status"]);
         if (response["status"] !== null) {
             this.setState({
@@ -52,11 +55,11 @@ class Vote extends React.Component {
         let mAlert = null;
         if (this.state.response["data"] === "Successfully voted") {
             mAlert = <Alert variant="success">
-            Successfully voted
+                Successfully voted
           </Alert>
-        } else if(this.state.response["data"] === "Already Voted") {
+        } else if (this.state.response["data"] === "Already Voted") {
             mAlert = <Alert variant="warning">
-            Already voted
+                Already voted
           </Alert>
         }
         return (
@@ -337,10 +340,10 @@ class Vote extends React.Component {
                         </Card>
                     </Col>
                 </Row>
-                <div style={{align:"center"}}>
-                <Button variant="success" onClick={() => {
-                            this.postVote();
-                        }} style={{ fontSize: 20, marginTop: 30, marginBottom: 20 }}>Finalize Vote</Button>
+                <div style={{ align: "center" }}>
+                    <Button variant="success" onClick={() => {
+                        this.postVote();
+                    }} style={{ fontSize: 20, marginTop: 30, marginBottom: 20 }}>Finalize Vote</Button>
                 </div>
                 {mAlert}
             </div>
