@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Navi></Navi>
         <Switch>
-          <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home}></Route>
+          <Route path={'/'} exact component={Home}></Route>
           <Route path='/login' component={Login}></Route>
           <Route path='/signup' component={Signup}></Route>
           <Route path='/vote' component={Vote}></Route>

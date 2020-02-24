@@ -4,11 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 function Navi() {
-    //</Navbar>/<Link to={`${process.env.PUBLIC_URL}/`}>
+    //
     return (
         <div>
             <Navbar style={{ backgroundColor: "#000000" }} variant="dark" expand="lg">
-                <Link to={`${process.env.PUBLIC_URL}/`}>
+                <Link to={'/'}>
                     <Navbar.Brand style={{ fontSize: "3vw", fontWeight: "bold", letterSpacing: 1 }}>Z-Voting</Navbar.Brand>
                 </Link>
                 <Nav className="ml-auto">
