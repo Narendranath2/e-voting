@@ -8,7 +8,7 @@ function Navi() {
     return (
         <div>
             <Navbar style={{ backgroundColor: "#000000" }} variant="dark" expand="lg">
-                <Link to={'/'}>
+                <Link to={`${process.env.PUBLIC_URL}/`}>
                     <Navbar.Brand style={{ fontSize: "3vw", fontWeight: "bold", letterSpacing: 1 }}>Z-Voting</Navbar.Brand>
                 </Link>
                 <Nav className="ml-auto">
