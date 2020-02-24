@@ -9,7 +9,7 @@ import party5 from './trs.png';
 import party6 from './janasena.png';
 import party7 from './loksatta.jpg';
 import party8 from './prajasanthi.png';
-import { Button, Row, Col, Card, Alert } from 'react-bootstrap';
+import { Button, Row, Col, Card, Alert} from 'react-bootstrap';
 class Vote extends React.Component {
     constructor(props) {
         super(props);
@@ -18,8 +18,6 @@ class Vote extends React.Component {
             disabled: [false, false, false, false, false, false, false, false],
             loading: false,
             response: {},
-            modalShow: false,
-            setModalShow: false
         }
     }
     async postVote() {
@@ -40,7 +38,6 @@ class Vote extends React.Component {
             candidateId: candId
         });
         let response = JSON.parse(JSON.stringify(res));
-        this.setState({setModalShow:true});
         console.log(response["status"]);
         if (response["status"] !== null) {
             this.setState({

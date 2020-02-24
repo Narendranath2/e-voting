@@ -7,7 +7,6 @@ class Signup extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showAlert: false,
             voterId: "",
             firstName: "",
             lastName: "",
@@ -18,13 +17,14 @@ class Signup extends Component {
             city: "",
             password: "",
             response:{},
-            loading:false
+            loading:false,
+            showBanner: false
         }
     }
 
-    async registerUser(event) {
+    async registerUser() {
         this.setState({
-            loading: true
+            loading: true,
         });
         console.log(this.state);
         const res = await axios.post('https://nameless-castle-69274.herokuapp.com/register', {
@@ -39,17 +39,38 @@ class Signup extends Component {
             password: this.state.password
         });
         var response = JSON.parse(JSON.stringify(res));
-        this.setState({
-            response
-        });
+        console.log(response);
+        if(response["data"] === "Successfully registered"){
+            this.setState({
+                response,
+                showBanner: true,
+                alertType: "success"
+            });
+        }else if(response["data"] === "Already registered"){
+            this.setState({
+                response,
+                showBanner: true,
+                alertType: "warning"
+            });
+        }else{
+            this.setState({
+                response,
+                showBanner: true,
+                alertType: "danger"
+            });
+        }
+        await setTimeout(() => {  console.log("Banner display time");this.setState({
+            showBanner: false
+        }); }, 1500);
+        
         console.log(res);
     }
 
     render() {
-        let mAlert;
-        if (this.state.showAlert === true) {
-            mAlert = <Alert variant={this.state.alertType} style={{ textAlign: "center" }}>
-                This is a alert—check it out!
+        let mBanner = null;
+        if (this.state.showBanner === true) {
+            mBanner = <Alert variant={this.state.alertType} style={{ textAlign: "center" }}>
+                {this.state.response["data"]}
                     </Alert>;
         }
         return (
@@ -123,7 +144,7 @@ class Signup extends Component {
                         <Button onClick={() => { this.registerUser() }} variant="success" style={{ width: 150, fontSize: 20 }}>Submit</Button>
                     </Form.Row>
                 </Form>
-                {mAlert}
+                {mBanner}
             </div>
         );
     }
