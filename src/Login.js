@@ -45,6 +45,7 @@ class Login extends React.Component {
                     <Vote voterId={this.state.currentuserVoterId} voterName={this.state.currentuserFirstName}></Vote>
                 </div>
             );
+            
         } else {
             return (
                 <div>
