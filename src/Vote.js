@@ -33,8 +33,8 @@ class Vote extends React.Component {
             }
         }
         const res = await axios.post('https://nameless-castle-69274.herokuapp.com/addVote', {
-            voterName: "React.JS ES6",
-            voterId: "996",
+            voterName: this.props.voterName,
+            voterId: this.props.voterId,
             candidateId: candId
         });
         let response = JSON.parse(JSON.stringify(res));

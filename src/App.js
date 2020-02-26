@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Login from './Login';
 import Signup from './Signup';
@@ -7,9 +7,10 @@ import Home from './Home';
 import Navi from './Navi';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
-function App() {
+class App extends Component {
   //<Route path={`${process.env.PUBLIC_URL}/`} exact component={Home}></Route>
-  return (
+  render() {
+    return (
       <Router>
         <Navi></Navi>
         <Switch>
@@ -19,7 +20,9 @@ function App() {
           <Route path='/vote' component={Vote}></Route>
         </Switch>
       </Router>
-  );
+    );
+  }
+
 }
 
 export default App;
