@@ -42,7 +42,7 @@ class Login extends React.Component {
         if (this.state.loggedIn === true) {
             return (
                 <div>
-                    <Vote voterId={this.state.currentuserVoterId} voterName={this.state.currentuserFirstName}></Vote>
+                    <Vote voterId={this.state.currentuserVoterId}></Vote>
                 </div>
             );
             
