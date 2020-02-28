@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Form, Button, Col, Alert } from 'react-bootstrap';
 import axios from 'axios';
+import Navi from './Navi';
 class Signup extends Component {
 
     constructor(props) {
@@ -75,6 +76,7 @@ class Signup extends Component {
         }
         return (
             <div>
+                <Navi fromSignup="true"></Navi>
                 <Form style={{ padding: 20 }}>
                     <Form.Row style={{ paddingBottom: 20 }}>
                         <Col>

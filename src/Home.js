@@ -3,10 +3,13 @@ import './App.css'
 import img1 from './block.png'
 import img2 from './bootstrap.png'
 import img3 from './springboot.png'
+import Navi from './Navi';
+
 import { Button, Navbar, Nav, Carousel, Row, Col, Card } from 'react-bootstrap';
 function Home() {
     return (
         <div style={{ overflowX: "hidden", overflowY: "auto" }}>
+            <Navi></Navi>
             <Carousel style={{ position: "relative", width: "100vw", height: "32vw" }}>
                 <Carousel.Item style={{ backgroundColor: "#000000", backgroundImage: "linear-gradient(315deg, #000000 0%, #414141 90%)", height: "32vw" }}>
                     <Carousel.Caption>

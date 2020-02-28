@@ -5,6 +5,7 @@ import img from './login-back.svg'
 import { Form, Button } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 import Vote from './Vote';
+import Navi from './Navi';
 class Login extends React.Component {
 
     constructor(props) {
@@ -49,6 +50,7 @@ class Login extends React.Component {
         } else {
             return (
                 <div>
+                    <Navi fromLogin="true"></Navi>
                     <img src={img} style={{ position: "fixed", marginLeft: "40%", width: "54vw", marginTop: "2%" }} alt="Group of people"></img>
                     <div>
                         <Form>
