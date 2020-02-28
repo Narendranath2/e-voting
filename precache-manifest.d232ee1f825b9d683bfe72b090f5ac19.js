@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "59c2855fa2c431c75ca82ada5bf47177",
+    "revision": "39c5f82566fc1130208ee86b240e4b64",
     "url": "/e-voting/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/e-voting/static/css/2.47e06e2e.chunk.css"
   },
   {
-    "revision": "ac200814ff5069d617fb",
+    "revision": "935b37eb260b9294e01f",
     "url": "/e-voting/static/css/main.ec0ecd6f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/e-voting/static/js/2.734332d6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ac200814ff5069d617fb",
-    "url": "/e-voting/static/js/main.617d706f.chunk.js"
+    "revision": "935b37eb260b9294e01f",
+    "url": "/e-voting/static/js/main.3f10a28d.chunk.js"
   },
   {
     "revision": "4473bdef5b2e35608cee",
@@ -44,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/e-voting/static/media/janasena.eaad2010.png"
   },
   {
-    "revision": "7c4bba03c06993cac074c33033254541",
-    "url": "/e-voting/static/media/login-back.7c4bba03.svg"
+    "revision": "bc2f3bcc68a5931604f1b384c8227d2e",
+    "url": "/e-voting/static/media/login-back.bc2f3bcc.svg"
   },
   {
     "revision": "dcabd5b75b3ea7789dfcb70bbd813d11",
