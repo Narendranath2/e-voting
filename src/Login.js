@@ -6,6 +6,7 @@ import { Form, Button } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 import Vote from './Vote';
 import Navi from './Navi';
+import loader from './loader.webp'
 class Login extends React.Component {
 
     constructor(props) {
@@ -15,38 +16,60 @@ class Login extends React.Component {
             password: "",
             loggedIn: false,
             currentuserVoterId: "",
-            currentuserFirstName: ""
+            currentuserFirstName: "",
+            isLoading: false,
+            resData: ""
         }
     }
 
 
     async login() {
         console.log(this.state);
+        this.setState({
+            isLoading: true
+        });
         const res = await axios.post('https://nameless-castle-69274.herokuapp.com/login', {
             username: this.state.username,
             password: this.state.password,
         });
         let response = JSON.parse(JSON.stringify(res));
         console.log(response);
-
+        this.setState({
+            resData: response['data']
+        });
         if (response['data'] !== "Invalid details") {
             var strs = response['data'].split(" ");
             this.setState({
                 loggedIn: true,
                 currentuserVoterId: strs[0],
-                currentuserFirstName: strs[1]
+                currentuserFirstName: strs[1],
             });
         }
+        this.setState({
+            isLoading: false
+        });
     }
 
     render() {
+        let resBanner;
+        resBanner = <p style={{marginLeft:"10%", marginTop:"1%", color:"red", fontSize: 20}}>{this.state.resData}</p>
+        let loglo;
+        if (this.state.isLoading === true) {
+            loglo = <img src={loader} style={{ width: "10%", marginLeft: "10%" }} alt="loading"></img>;
+        } else {
+            loglo = <Button variant="dark" onClick={() => {
+                this.login()
+            }} style={{ width: "10vw", marginLeft: "10vw", fontWeight: "bold", fontSize: "1.3vw", backgroundColor: "black", color: "#FFC74D", marginTop: 20 }}>
+                Login
+            </Button>
+        }
         if (this.state.loggedIn === true) {
             return (
                 <div>
                     <Vote voterId={this.state.currentuserVoterId}></Vote>
                 </div>
             );
-            
+
         } else {
             return (
                 <div>
@@ -70,11 +93,8 @@ class Login extends React.Component {
                                     });
                                 }} />
                             </Form.Group>
-                            <Button variant="dark" onSubmit={this.login} onClick={() => {
-                                this.login()
-                            }} style={{ width: "10vw", marginLeft: "10vw", fontWeight: "bold", fontSize: "1.3vw", backgroundColor: "black", color: "#FFC74D", marginTop: 20 }}>
-                                Login
-                            </Button>
+                            {loglo}
+                            {resBanner}
                         </Form>
                     </div>
                 </div>

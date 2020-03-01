@@ -205,7 +205,7 @@ class Vote extends React.Component {
                             <Card.Body>
                                 <Card.Title>TRS</Card.Title>
                                 <Card.Text>
-                                    Telangana rashtra party
+                                    Telangana rashtra samithi
                                 </Card.Text>
                                 <Button variant={this.state.variants[4]} onClick={() => {
                                     let variantsCopy = JSON.parse(JSON.stringify(this.state.variants));
@@ -337,7 +337,7 @@ class Vote extends React.Component {
                     </Col>
                 </Row>
                 <div style={{ align: "center" }}>
-                    <Button variant="success" onClick={() => {
+                    <Button variant="warning" onClick={() => {
                         this.postVote();
                     }} style={{ fontSize: 20, marginTop: 30, marginBottom: 20 }}>Finalize Vote</Button>
                 </div>

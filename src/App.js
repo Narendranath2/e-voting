@@ -4,7 +4,6 @@ import Login from './Login';
 import Signup from './Signup';
 import Vote from './Vote';
 import Home from './Home';
-import Navi from './Navi';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component {
