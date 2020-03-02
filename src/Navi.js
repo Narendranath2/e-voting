@@ -3,15 +3,15 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-class Navi extends Component{
-    constructor(props){
+class Navi extends Component {
+    constructor(props) {
         super(props);
         this.state = {
 
         }
     }
-    render(){
-        if(this.props.fromLogin === "true"){
+    render() {
+        if (this.props.fromLogin === "true") {
             return (
                 <div>
                     <Navbar style={{ backgroundColor: "#000000" }} variant="dark" expand="lg">
@@ -28,7 +28,7 @@ class Navi extends Component{
                     </Navbar>
                 </div>
             );
-        }else if(this.props.fromSignup === "true"){
+        } else if (this.props.fromSignup === "true") {
             return (
                 <div>
                     <Navbar style={{ backgroundColor: "#000000" }} variant="dark" expand="lg">
@@ -45,7 +45,7 @@ class Navi extends Component{
                     </Navbar>
                 </div>
             );
-        }else{
+        } else {
             return (
                 <div>
                     <Navbar style={{ backgroundColor: "#000000" }} variant="dark" expand="lg">

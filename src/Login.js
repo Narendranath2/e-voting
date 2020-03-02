@@ -2,11 +2,12 @@ import React from 'react'
 import axios from 'axios';
 import './App.css'
 import img from './login-back.svg'
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Navbar, Nav } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 import Vote from './Vote';
 import Navi from './Navi';
 import loader from './loader.webp'
+import {Link} from 'react-router-dom'
 class Login extends React.Component {
 
     constructor(props) {
@@ -21,7 +22,6 @@ class Login extends React.Component {
             resData: ""
         }
     }
-
 
     async login() {
         console.log(this.state);
@@ -38,6 +38,7 @@ class Login extends React.Component {
             resData: response['data']
         });
         if (response['data'] !== "Invalid details") {
+            localStorage.setItem("loginStatus",true);
             var strs = response['data'].split(" ");
             this.setState({
                 loggedIn: true,
@@ -52,7 +53,7 @@ class Login extends React.Component {
 
     render() {
         let resBanner;
-        resBanner = <p style={{marginLeft:"10%", marginTop:"1%", color:"red", fontSize: 20}}>{this.state.resData}</p>
+        resBanner = <p style={{ marginLeft: "10%", marginTop: "1%", color: "red", fontSize: 20 }}>{this.state.resData}</p>
         let loglo;
         if (this.state.isLoading === true) {
             loglo = <img src={loader} style={{ width: "10%", marginLeft: "10%" }} alt="loading"></img>;
@@ -63,9 +64,25 @@ class Login extends React.Component {
                 Login
             </Button>
         }
-        if (this.state.loggedIn === true) {
+        if (localStorage.getItem('loginStatus') === "true") {
             return (
                 <div>
+                    <Navbar style={{ backgroundColor: "#000000" }} variant="dark" expand="lg">
+                        <Link to={'/'}>
+                            <Navbar.Brand style={{ fontSize: "3vw", fontWeight: "bold", letterSpacing: 1 }}>Z-Voting</Navbar.Brand>
+                        </Link>
+                        <Nav className="ml-auto">
+                            <Nav.Item className="Login-btn">
+                                    <Button variant="warning" style={{ margin: 5 }} onClick={()=>{
+                                        localStorage.setItem('loginStatus',false);
+                                        this.setState({
+                                            loggedIn: false,
+                                            resData: ""
+                                        });
+                                    }}>Logout</Button>
+                            </Nav.Item>
+                        </Nav>
+                    </Navbar>
                     <Vote voterId={this.state.currentuserVoterId}></Vote>
                 </div>
             );

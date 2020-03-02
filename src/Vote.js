@@ -60,9 +60,9 @@ class Vote extends React.Component {
         }
         return (
             <div align="center">
-                <Row style={{ marginTop: 10 }}>
-                    <Col xs={12} sm={6} lg={3} style={{ padding: 10 }}>
-                        <Card style={{ width: '18rem' }}>
+                <Row style={{ marginTop: 5 }}>
+                    <Col xs={12} sm={6} lg={3} style={{ padding: 5 }}>
+                        <Card style={{ width: '13rem' }}>
                             <Card.Img variant="top" src={party1} />
                             <Card.Body>
                                 <Card.Title>TDP</Card.Title>
@@ -95,8 +95,8 @@ class Vote extends React.Component {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col xs={12} sm={6} lg={3} style={{ padding: 10 }}>
-                        <Card style={{ width: '18rem' }}>
+                    <Col xs={12} sm={6} lg={3} style={{ padding: 5 }}>
+                        <Card style={{ width: '13rem' }}>
                             <Card.Img variant="top" src={party2} />
                             <Card.Body>
                                 <Card.Title>YSRCP</Card.Title>
@@ -129,8 +129,8 @@ class Vote extends React.Component {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col xs={12} sm={6} lg={3} style={{ padding: 10 }}>
-                        <Card style={{ width: '18rem' }}>
+                    <Col xs={12} sm={6} lg={3} style={{ padding: 5 }}>
+                        <Card style={{ width: '13rem' }}>
                             <Card.Img variant="top" src={party3} />
                             <Card.Body>
                                 <Card.Title>BJP</Card.Title>
@@ -163,112 +163,8 @@ class Vote extends React.Component {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col xs={12} sm={6} lg={3} style={{ padding: 10 }}>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={party4} />
-                            <Card.Body>
-                                <Card.Title>AAP</Card.Title>
-                                <Card.Text>
-                                    Aam admi party
-                                </Card.Text>
-                                <Button variant={this.state.variants[3]} onClick={() => {
-                                    let variantsCopy = JSON.parse(JSON.stringify(this.state.variants));
-                                    let disabledCopy = JSON.parse(JSON.stringify(this.state.disabled));
-                                    var i;
-                                    if (this.state.variants[3] === "success") {
-                                        variantsCopy[3] = "dark";
-                                        for (i = 0; i < 8; i++) {
-                                            disabledCopy[i] = false;
-                                        }
-                                    } else {
-                                        variantsCopy[3] = "success";
-                                        for (i = 0; i < 8; i++) {
-                                            if (i !== 3)
-                                                disabledCopy[i] = true;
-                                        }
-                                    }
-                                    this.setState({
-                                        variants: variantsCopy
-                                    });
-                                    this.setState({
-                                        disabled: disabledCopy
-                                    })
-                                }} disabled={this.state.disabled[3]}>Vote</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-                <Row style={{}}>
-                    <Col xs={12} sm={6} lg={3} style={{ padding: 10 }}>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={party5} />
-                            <Card.Body>
-                                <Card.Title>TRS</Card.Title>
-                                <Card.Text>
-                                    Telangana rashtra samithi
-                                </Card.Text>
-                                <Button variant={this.state.variants[4]} onClick={() => {
-                                    let variantsCopy = JSON.parse(JSON.stringify(this.state.variants));
-                                    let disabledCopy = JSON.parse(JSON.stringify(this.state.disabled));
-                                    var i;
-                                    if (this.state.variants[4] === "success") {
-                                        variantsCopy[4] = "dark";
-                                        for (i = 0; i < 8; i++) {
-                                            disabledCopy[i] = false;
-                                        }
-                                    } else {
-                                        variantsCopy[4] = "success";
-                                        for (i = 0; i < 8; i++) {
-                                            if (i !== 4)
-                                                disabledCopy[i] = true;
-                                        }
-                                    }
-                                    this.setState({
-                                        variants: variantsCopy
-                                    });
-                                    this.setState({
-                                        disabled: disabledCopy
-                                    })
-                                }} disabled={this.state.disabled[4]}>Vote</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col xs={12} sm={6} lg={3} style={{ padding: 10 }}>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={party6} />
-                            <Card.Body>
-                                <Card.Title>JSP</Card.Title>
-                                <Card.Text>
-                                    Janasena party
-                                </Card.Text>
-                                <Button variant={this.state.variants[5]} onClick={() => {
-                                    let variantsCopy = JSON.parse(JSON.stringify(this.state.variants));
-                                    let disabledCopy = JSON.parse(JSON.stringify(this.state.disabled));
-                                    var i;
-                                    if (this.state.variants[5] === "success") {
-                                        variantsCopy[5] = "dark";
-                                        for (i = 0; i < 8; i++) {
-                                            disabledCopy[i] = false;
-                                        }
-                                    } else {
-                                        variantsCopy[5] = "success";
-                                        for (i = 0; i < 8; i++) {
-                                            if (i !== 5)
-                                                disabledCopy[i] = true;
-                                        }
-                                    }
-                                    this.setState({
-                                        variants: variantsCopy
-                                    });
-                                    this.setState({
-                                        disabled: disabledCopy
-                                    })
-                                }} disabled={this.state.disabled[5]}>Vote</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col xs={12} sm={6} lg={3} style={{ padding: 10 }}>
-                        <Card style={{ width: '18rem' }}>
+                    <Col xs={12} sm={6} lg={3} style={{ padding: 5 }}>
+                        <Card style={{ width: '13rem' }}>
                             <Card.Img variant="top" src={party7} />
                             <Card.Body>
                                 <Card.Title>LSP</Card.Title>
@@ -301,8 +197,112 @@ class Vote extends React.Component {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col xs={12} sm={6} lg={3} style={{ padding: 10 }}>
-                        <Card style={{ width: '18rem' }}>
+                </Row>
+                <Row style={{}}>
+                <Col xs={12} sm={6} lg={3} style={{ padding: 5  }}>
+                        <Card style={{ width: '13rem' }}>
+                            <Card.Img variant="top" src={party4} />
+                            <Card.Body>
+                                <Card.Title>AAP</Card.Title>
+                                <Card.Text>
+                                    Aam admi party
+                                </Card.Text>
+                                <Button variant={this.state.variants[3]} onClick={() => {
+                                    let variantsCopy = JSON.parse(JSON.stringify(this.state.variants));
+                                    let disabledCopy = JSON.parse(JSON.stringify(this.state.disabled));
+                                    var i;
+                                    if (this.state.variants[3] === "success") {
+                                        variantsCopy[3] = "dark";
+                                        for (i = 0; i < 8; i++) {
+                                            disabledCopy[i] = false;
+                                        }
+                                    } else {
+                                        variantsCopy[3] = "success";
+                                        for (i = 0; i < 8; i++) {
+                                            if (i !== 3)
+                                                disabledCopy[i] = true;
+                                        }
+                                    }
+                                    this.setState({
+                                        variants: variantsCopy
+                                    });
+                                    this.setState({
+                                        disabled: disabledCopy
+                                    })
+                                }} disabled={this.state.disabled[3]}>Vote</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col xs={12} sm={6} lg={3} style={{ padding: 5 }}>
+                        <Card style={{ width: '13rem' }}>
+                            <Card.Img variant="top" src={party5} />
+                            <Card.Body>
+                                <Card.Title>TRS</Card.Title>
+                                <Card.Text>
+                                    Telangana rashtra samithi
+                                </Card.Text>
+                                <Button variant={this.state.variants[4]} onClick={() => {
+                                    let variantsCopy = JSON.parse(JSON.stringify(this.state.variants));
+                                    let disabledCopy = JSON.parse(JSON.stringify(this.state.disabled));
+                                    var i;
+                                    if (this.state.variants[4] === "success") {
+                                        variantsCopy[4] = "dark";
+                                        for (i = 0; i < 8; i++) {
+                                            disabledCopy[i] = false;
+                                        }
+                                    } else {
+                                        variantsCopy[4] = "success";
+                                        for (i = 0; i < 8; i++) {
+                                            if (i !== 4)
+                                                disabledCopy[i] = true;
+                                        }
+                                    }
+                                    this.setState({
+                                        variants: variantsCopy
+                                    });
+                                    this.setState({
+                                        disabled: disabledCopy
+                                    })
+                                }} disabled={this.state.disabled[4]}>Vote</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col xs={12} sm={6} lg={3} style={{ padding: 5 }}>
+                        <Card style={{ width: '13rem' }}>
+                            <Card.Img variant="top" src={party6} />
+                            <Card.Body>
+                                <Card.Title>JSP</Card.Title>
+                                <Card.Text>
+                                    Janasena party
+                                </Card.Text>
+                                <Button variant={this.state.variants[5]} onClick={() => {
+                                    let variantsCopy = JSON.parse(JSON.stringify(this.state.variants));
+                                    let disabledCopy = JSON.parse(JSON.stringify(this.state.disabled));
+                                    var i;
+                                    if (this.state.variants[5] === "success") {
+                                        variantsCopy[5] = "dark";
+                                        for (i = 0; i < 8; i++) {
+                                            disabledCopy[i] = false;
+                                        }
+                                    } else {
+                                        variantsCopy[5] = "success";
+                                        for (i = 0; i < 8; i++) {
+                                            if (i !== 5)
+                                                disabledCopy[i] = true;
+                                        }
+                                    }
+                                    this.setState({
+                                        variants: variantsCopy
+                                    });
+                                    this.setState({
+                                        disabled: disabledCopy
+                                    })
+                                }} disabled={this.state.disabled[5]}>Vote</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col xs={12} sm={6} lg={3} style={{ padding: 5 }}>
+                        <Card style={{ width: '13rem' }}>
                             <Card.Img variant="top" src={party8} />
                             <Card.Body>
                                 <Card.Title>PSP</Card.Title>
