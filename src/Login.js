@@ -38,8 +38,9 @@ class Login extends React.Component {
             resData: response['data']
         });
         if (response['data'] !== "Invalid details") {
-            localStorage.setItem("loginStatus",true);
             var strs = response['data'].split(" ");
+            localStorage.setItem("loginStatus",true);
+            localStorage.setItem("voterId", strs[0]);
             this.setState({
                 loggedIn: true,
                 currentuserVoterId: strs[0],
@@ -83,7 +84,7 @@ class Login extends React.Component {
                             </Nav.Item>
                         </Nav>
                     </Navbar>
-                    <Vote voterId={this.state.currentuserVoterId}></Vote>
+                    <Vote voterId={localStorage.getItem('voterId')}></Vote>
                 </div>
             );
 
